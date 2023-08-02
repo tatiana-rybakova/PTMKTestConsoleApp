@@ -14,7 +14,7 @@ namespace PTMKTest.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 
-            //Обозначение индекса для ускорения поиска по выбранным полям
+            //Обозначение индекса для ускорения поиска по выбранным столбцам
             modelBuilder.Entity<Person>().HasIndex(p => new { p.Name, p.Sex }).HasDatabaseName("SearchIndex");
         }
     }
